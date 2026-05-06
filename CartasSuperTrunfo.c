@@ -1,70 +1,81 @@
-#include <stdio.h>
+    #include <stdio.h>
 
 
-int main() {
+      int main() {
 
 //Local onde se encontra todas as váriaveis
-  char estado, estadoo;
-char milhao[10];
-char kilometros[10];
-char código[20];
-char cidade[20];
-char milhaoo[10];
-char kilometross[10];
-char códigoo[20];
-char cidadee[20];
-int população, turisticos, populaçãoo, turisticoss;
-float área, pib, piib, áreaa;
+char estado, estadoo;
+  char código[20];
+    char cidade[20];
+      char códigoo[20];
+        char cidadee[20];
+      int  turisticos, população, populaçãoo, turisticoss;
+    float área, pib, piib, áreaa, pibPC, piibPC, densidadeP, densidadeeP;
 //Cada uma dessas váriaveis identifica uma caracteristica das cartas
 
 //Entrada e saída de dados da carta 1
 printf("Carta 1:\n");
-printf("Estado: ");
-scanf("%c", &estado);
 
-printf("Código: ");
-scanf("%s", código);
+    printf("Estado: ");
+      scanf("%c", &estado);
 
-printf("Nome da cidade: ");
+      printf("Código: ");
+    scanf("%s", código);
+
+  printf("Nome da cidade: ");
 scanf("%s", cidade);
 
-printf("População: ");
-scanf("%d", &população);
+    printf("População: ");
+      scanf("%d", &população);
 
-printf("Área: ");
-scanf("%f%s", &área, kilometros);
+    printf("Área: ");
+  scanf("%fkm²", &área);
 
-printf("PIB: ");
-scanf("%f%s", &pib, milhao);
+  printf("PIB: R$ ");
+    scanf("%fM", &pib);
 
-printf("Números de Pontos Turísticos: ");
-scanf("%d", &turisticos);
-printf("\n\n");
+        printf("Números de pontos Turísticos: ");
+      scanf("%d", &turisticos);
+
+  densidadeP = (população / área);
+printf("Densidade Populacional: %.2fhab/km²\n", densidadeP);
+
+    pibPC = (pib * 1000000 / população);
+      printf("Pib per Capita: %.2fR$\n", pibPC);
+
+        printf("\n\n");
 
 //Entrada e saída de dados da carta 2
-printf("Carta 2:\n");
+        printf("Carta 2:\n");
 
-printf("Estado: ");
-scanf(" %c", &estadoo);
+    printf("Estado: ");
+  scanf(" %c", &estadoo);
 
-printf("Código: ");
-scanf("%s", códigoo);
+      printf("Código: ");
+        scanf("%s", códigoo);
 
-printf("Nome da cidade: ");
-scanf("%s", cidadee);
+    printf("Nome da cidade: ");
+  scanf("%s", cidadee);
 
-printf("População: ");
-scanf("%d", &populaçãoo);
+  printf("População: ");
+    scanf("%d", &populaçãoo);
 
-printf("Área: ");
-scanf("%f%s", &áreaa, kilometross);
+        printf("Área: ");
+      scanf("%fkm²", &áreaa);
 
-printf("PIB: ");
-scanf("%f%s", &piib, milhaoo);
+  printf("PIB: R$ ");
+scanf("%fM", &piib);
 
-printf("Números de Pontos Turísticos: ");
-scanf("%d", &turisticoss);
+    printf("Números de Pontos Turísticos: ");
+      scanf("%d", &turisticoss);
 
+        densidadeeP = (populaçãoo / áreaa);
+      printf("Densidade Populacional: %.2fhab/km²\n", densidadeeP);
+//Calculo feito para calcular a Densidade Populacional
+
+  piibPC = (piib * 1000000 / populaçãoo);
+printf("Pib per Capita: %.2fR$\n", piibPC);
+//Calculo feito para calcular o Pib per Capita
 
 
 return 0;
